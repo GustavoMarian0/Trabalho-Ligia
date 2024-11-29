@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-image: url('img/background-img.png');
+}
+
+section {
+    background-color: aliceblue;
+    width: 60%;
+    max-width: 60%;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 2%;
+    padding: 20px;
+}
+
+.containers {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 15px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 5%;
+    margin-top: 2%;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+.card {
+    aspect-ratio: 3/4;
+    width: 70%;
+    background-color: #a7a6a6;
+    border: 1px solid #000;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    position: relative;
+    transition: all 700ms ease;
+    transform-style: preserve-3d;
+}
+
+.card_back_click {
+    transform: rotateY(180deg);
+}
+
+.conf {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #000;
+    transition: all 500ms ease;
+}
+
+.back {
+    background-image: url('img/duvida.jpg');
+    backface-visibility: hidden;
+}
+
+.correct_card {
+    filter: saturate(0);
+    opacity: 0.5;
+    transition: all 500ms ease;
+}
+
+mark {
+    background-color: #3CA6A6;
+}
+
+/* Painel de Informações */
+
+.painel {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.time {
+    width: 100px;
+}
+
+.btn button {
+    background-color: transparent;
+    border: 1px solid #3CA6A6;
+    border-radius: 5px;
+    padding: 10% 20%;
+    font-weight: 500;
+    color: #3CA6A6;
+    cursor: pointer;
+}
+
+.btn button:hover {
+    transform: scale(1.15);
+    transition: 0.2s;
+}
+
+/* CELULAR */
+
+@media screen and (max-width: 700px){
+    
+    section {
+        width: 1200px;
+        max-width: 90%;
+        min-height: 500px;
+        height: 550px;
+        margin: 15% auto;
+    }
+
+    .containers {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        width: 100%;
+        max-width: 800px;
+        margin: 0 0;
+        margin-top: 2%;
+    }
+
+    .painel {
+        margin: 10%;
+    }
+
+    #p_time {
+        margin-left: -15px;
+        width: 50px;
+        flex-wrap: wrap;
+    }
+
+    #timer {
+        margin-left: 11px;
+    }
+
+    .giros {
+        margin-left: -50px;
+    }
+
+}
+
+/* TABLET */
+
+@media screen and (min-width: 701px) and (max-width: 1000px) {
+
+    section {
+        width: 1200px;
+        max-width: 90%;
+        min-height: 500px;
+        height: 700px;
+        margin: 15% auto;
+    }
+
+    .containers {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        width: 100%;
+        max-width: 800px;
+        margin: 0 0;
+        margin-top: 2%;
+    }
+
+    .painel {
+        margin: 10%;
+    }
+
+    #p_time {
+        margin-left: -15px;
+    }
+
+    #timer {
+        margin-left: 11px;
+    }
+
+    .giros {
+        margin-left: -50px;
+    }
+
+}
+
+/* NOTEBOOK */
+
+@media screen and (min-width: 1001px) {
+
+    section {
+        margin-top: 2%;
+    }
+    
+    .containers {
+        margin: 0 auto;
+    }
+
+}
